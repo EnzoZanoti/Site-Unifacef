@@ -181,17 +181,39 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 .carrossel-trilha {
   display: flex;
   gap: 20px;
-  height: 500px;
+  height: 555px;
   
 }
 
 .card {
   flex-shrink: 0;
-  width: 250px;
+  width: 300px;
   text-align: center;
   background-color: white; 
   padding: 20px; 
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   scroll-snap-align: center;
+}
+
+.card ul {
+  list-style: none;
+  border-style: dashed;
+  padding: 20px;
+  border-color: yellow;
+  background-color:#fff8e1;
+}
+.card li {
+  list-style: none;
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+.card-suplementos {
+  flex: 1;
+  background-color: rgb(247, 195, 195);
+  padding: 5px;
+  border-left: 5px solid red;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
