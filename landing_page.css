@@ -232,3 +232,37 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   margin: 8px;
   opacity: 0.8;
 }
+
+.timeline {
+  border-left: 3px solid #1E3c72;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.evento {
+  margin-bottom: 25px;
+  position: relative; /*dá poder de flutuar na página*/
+}
+
+.evento::before{ /*cria um pseudoelemento no CSS - elemento fantasma*/
+  content: '';/*sem texto*/
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius:20px;
+  position: absolute;
+  left:-27px;
+}
+
+.grid-locais {
+  display: flex;
+  gap:20px;
+}
+
+.local {
+  flex:1; /*equivale a 1 área*/
+  background: #fff8e1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #cbdcf7
+}
