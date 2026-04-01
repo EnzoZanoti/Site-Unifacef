@@ -294,3 +294,8 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
+.homenagem {
+  list-style: none;
+  color:darkgoldenrod;
+}
