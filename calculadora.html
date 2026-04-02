@@ -38,8 +38,17 @@
                         <input type="number" value="0" min="0" id="qtdeFeijao"/>
                     </div>
 
-                    <div></div>
-                    <div></div>
+                     <div class="form-group">
+                        <!--2 pontos-->
+                        <label>Óleo (1L)</label> 
+                        <input type="number" value="0" min="0" id="qtdeOleo"/>
+                    </div>
+
+                     <div class="form-group">
+                         <!--4 pontos-->
+                        <label>Macarrão (500g)</label>
+                        <input type="number" value="0" min="0" id="qtdeMacarrao"/>
+                    </div>
                 </div>
                 <button onclick="calcular()">Calcular Total</button>
                 <div id="result" class="resultado">
@@ -51,5 +60,19 @@
                 <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br</p>
                 <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
             </footer>
+
+            <script>
+                function calcular(){
+                    //recupera a quantidade de arroz
+
+                    let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
+                    let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
+                    let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
+                    let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
+                    let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 2) + (qtdeMacarrao * 4)
+
+                    document.getElementById("result").innerText = "Pontuação: " + pontos
+                }
+            </script>
     </body>
 </html>
