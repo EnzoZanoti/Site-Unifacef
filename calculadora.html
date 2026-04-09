@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title> Cronograma Trote 2026</title>
         <link rel="stylesheet" href="landing_page.css">
+        <script src="scripts.js"></script>
     </head>
 
     <body>
@@ -50,29 +51,35 @@
                         <input type="number" value="0" min="0" id="qtdeMacarrao"/>
                     </div>
                 </div>
-                <button onclick="calcular()">Calcular Total</button>
+            </section>
+
+            <section>
+                <h3>Simulador de Pontos - Kit Alimentação</h3>
+                <div class="form-group">
+                    <label> Escolha a cor do time</label>
+                    <select id="cor">
+                        <option value="verde"> Verde </option>
+                        <option value="vermelho"> Vermelho </option>
+                        <option value="laranja"> Laranja </option>
+                        <option value="amarelo"> Amarelo </option>
+                        <option value="cinza"> Cinza </option>
+                        <option value="marron"> Marron </option>
+                        <option value="preto"> Preto </option>
+                        <option value="roxo"> Roxo </option>
+                    </select>
+                </div>
+                
+            </section>
+            <button onclick="calcular()">Calcular Total</button>
                 <div id="result" class="resultado">
                     Pontuação Total: 0 pontos
                 </div>
-            </section>
+
         </main>
+
             <footer class="footer">
                 <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br</p>
                 <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
             </footer>
-
-            <script>
-                function calcular(){
-                    //recupera a quantidade de arroz
-
-                    let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
-                    let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
-                    let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
-                    let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
-                    let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 2) + (qtdeMacarrao * 4)
-
-                    document.getElementById("result").innerText = "Pontuação: " + pontos
-                }
-            </script>
     </body>
 </html>
