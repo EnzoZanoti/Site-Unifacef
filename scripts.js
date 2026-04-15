@@ -8,8 +8,9 @@
                     let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
                     let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 2) + (qtdeMacarrao * 4)
 
-                    let cor =Document.getElementById("cor").value
+                    let cor = document.getElementById("cor").value
                     let metaKit
+
                     if (cor == "verde"){
                         metaKit = 61
                     } //SI e CC//
@@ -37,6 +38,16 @@
                     else if (cor == "rosa"){
                         metaKit = 44
                     } //Contábeis//
+
+                    let quantKit = Number(document.getElementById("quantKit").value)
+                    if (quantKit >= metaKit) {
+                        pontos = pontos + 5000
+                        if (quantKit > metaKit) {
+                            pontos = pontos + (quantKit - metaKit)*(5000/metaKit)
+                        }
+                    } else {
+                        pontos = pontos + quantKit * (5000/metaKit)
+                    }
 
                     document.getElementById("result").innerText = "Pontuação: " + pontos
                 }
