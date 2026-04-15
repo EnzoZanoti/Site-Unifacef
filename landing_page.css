@@ -183,6 +183,62 @@ display: inline-block;
 border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 }
 
+.laranja {
+width: 20px;
+height: 20px;
+background-color: orange;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.marrom {
+width: 20px;
+height: 20px;
+background-color: brown;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.preto {
+width: 20px;
+height: 20px;
+background-color: black;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.rosa {
+width: 20px;
+height: 20px;
+background-color: deeppink;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.roxa {
+width: 20px;
+height: 20px;
+background-color: blueviolet;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.verde {
+width: 20px;
+height: 20px;
+background-color: green;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
+.vermelho {
+width: 20px;
+height: 20px;
+background-color: red;
+display: inline-block;
+border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
+}
+
 .carrossel-container {
   overflow-x: auto;
   height: 100%;
