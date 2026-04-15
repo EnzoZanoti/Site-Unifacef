@@ -12,13 +12,31 @@
                     let metaKit
                     if (cor == "verde"){
                         metaKit = 61
-                    }
+                    } //SI e CC//
                     else if (cor == "vermelho"){
                         metaKit = 32
-                    }
+                    } //Administração//
                     else if (cor == "laranja"){
                         metaKit = 21
-                    }
+                    } //Letras//
+                     else if (cor == "amarelo"){
+                        metaKit = 54
+                    } //Social//
+                     else if (cor == "cinza"){
+                        metaKit = 51
+                    } //Psicologia//
+                     else if (cor == "marron"){
+                        metaKit = 88
+                    } //Medicina//
+                     else if (cor == "preto"){
+                        metaKit = 60
+                    } //Software//
+                     else if (cor == "roxo"){
+                        metaKit = 42
+                    } //Engenharia//
+                    else if (cor == "rosa"){
+                        metaKit = 44
+                    } //Contábeis//
 
                     document.getElementById("result").innerText = "Pontuação: " + pontos
                 }
