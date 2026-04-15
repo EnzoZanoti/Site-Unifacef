@@ -49,5 +49,5 @@
                         pontos = pontos + quantKit * (5000/metaKit)
                     }
 
-                    document.getElementById("result").innerText = "Pontuação: " + pontos
+                    document.getElementById("result").innerText = "Pontuação: " + Math.round(pontos)
                 }
