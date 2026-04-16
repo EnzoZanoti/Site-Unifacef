@@ -49,5 +49,21 @@
                         pontos = pontos + quantKit * (5000/metaKit)
                     }
 
-                    document.getElementById("result").innerText = "Pontuação: " + Math.round(pontos)
+                    let metaSuplemento
+                    if (metaKit % 2 == 0) {
+                        metaSuplemento = metaKit/2
+                    } else {metaSuplemento = (metaKit / 2) + 0.5}
+
+                    let quantSuplemento = Number(document.getElementById("quantSuplemento").value) 
+                    if (quantSuplemento >= metaSuplemento) {
+                        pontos = pontos + 5000
+                        if (quantSuplemento > metaSuplemento){
+                    pontos = pontos + (quantSuplemento - metaSuplemento) + (5000/metaSuplemento)
+                        }
+                       
+                    } else {
+                        pontos = pontos + quantSuplemento + (5000/metaSuplemento)
+                    }
+
+                    document.getElementById("result").innerText = "Pontuação: " + pontos.toFixed(2)
                 }
