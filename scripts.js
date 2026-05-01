@@ -65,5 +65,10 @@
                         pontos = pontos + quantSuplemento + (5000/metaSuplemento)
                     }
 
+                    let metaLeite = Number(document.getElementById("metaLeite").value)
+                    metaLeite = metaKit
+                    let metaSangue = Number(document.getElementById("metaSangue").value)
+                    metaSangue = metaSuplemento
+
                     document.getElementById("result").innerText = "Pontuação: " + pontos.toFixed(2)
                 }

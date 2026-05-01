@@ -54,28 +54,57 @@
             </section>
 
             <section>
-                <h3>Simulador de Pontos - Metas Batidas</h3>
-                <div class="form-group">
-                    <label> Escolha a cor do time</label>
-                    <select id="cor">
-                        <option value="verde"> Verde </option>
-                        <option value="vermelho"> Vermelho </option>
-                        <option value="laranja"> Laranja </option>
-                        <option value="amarelo"> Amarelo </option>
-                        <option value="cinza"> Cinza </option>
-                        <option value="marron"> Marron </option>
-                        <option value="preto"> Preto </option>
-                        <option value="roxo"> Roxo </option>
-                    </select>
-                     <label> Kits de Alimentação</label>
-                    <input type="number" value="0" min="0" id="quantKit"/>
-                </div>
-                <div class="form-group">
-                    <label> Quant. de Suplementos</label>
-                     <input type="number" value="0" min="0" id="quantSuplemento"/>
-                </div>
                 
+                <h3>🧮 Simulador de Pontos - Metas batidas</h3>
+
+                <div>
+
+                    <div class="form-group">
+                        
+                        <label> Escolha a cor do time </label>
+                        <select id="cor">
+                            <option value="amarelo">Amarelo</option>
+                            <option value="cinza">Cinza</option>
+                            <option value="laranja">Laranja</option>
+                            <option value="marrom">Marrom</option>
+                            <option value="preto">Preto</option>
+                            <option value="rosa">Rosa</option>
+                            <option value="roxo">Roxo</option>
+                            <option value="verde">Verde</option>
+                            <option value="vermelho">Vermelho</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kits de Alimentação</label>
+                        <input type="number" id="qtdeKits" min="0" value="0"/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Qtde de Suplemento</label>
+                        <input type="number" id="qtdeSuplemento" min="0" value="0"/>
+                    </div>
+                    
+                    <div>
+                        <div class="form-group">
+                            <label>Quantidade de Leite(1L)</label>
+                            <input type="number" id="metaLeite" min="0" value="0"/>
+                        </div>
+                    </div>
+
+                        <div>
+                        <div class="form-group">
+                            <label>Doação de Sangue</label>
+                            <input type="number" id="metaSangue" min="0" value="0"/>
+                        </div>
+                    </div>
+                
+                </div>
+
             </section>
+
             <button onclick="calcular()">Calcular Total</button>
                 <div id="result" class="resultado">
                     Pontuação Total: 0 pontos
