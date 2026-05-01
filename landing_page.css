@@ -2,15 +2,18 @@
 
 /*pagina toda*/
 body {
-  background-color: aliceblue;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: #F8F2E9;
+  font-family:"Montserrat" , sans-serif ;
+  
 }
+
+
 /*pagina toda*/
 
 /*roda teto*/
 .quadro-branco {
   
-  background-color:aliceblue;
+  background-color:#264b8b;
   padding:60px 20px;
   text-align:center;
 }
@@ -21,8 +24,17 @@ body {
 }
 
 .cabecalho-container h1{
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   color: white;
   margin-top: 0; 
+}
+
+.cabecalho-container h2{
+  
+  color:#ffd700;
 }
 
 .cabecalho-container img{
@@ -55,7 +67,7 @@ button{
 
 /*cabeçalho pagina principal*/
 .menu-principal {
-    background-color: #1E3c72; padding: 15px 0; /*0 se refere a esquerda e direita*/
+    background-color: #004349; padding: 15px 0; /*0 se refere a esquerda e direita*/
     position: sticky; top:0; z-index: 1000;
     box-shadow: 0 2xp 10 xp rgba(0,0,0,0,5);
     
@@ -101,7 +113,7 @@ section{
   margin-bottom: 20px;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 5px 1px gray;
+ box-shadow: 0 5px 15px rgba(0,0,0, 0.3)
 }
 /*main geral*/
 
@@ -339,7 +351,7 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 
 /*RODA PÉ DA PAGINA INTEIRA {*/
 .footer {
- background-color: #1E3c72;
+ background-color: #004349;
  color:white;
  text-align: center;
  padding: 30px 20px;
@@ -355,13 +367,30 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 /*} RODA PÉ DA PAGINA INTEIRA*/
 
 /*pagina CRONOGRAMA {*/
+.caixas_cronograma{
+  background: #E9DCC8;
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 12px;
+ box-shadow: 0 5px 15px rgba(0,0,0, 0.3)
+}
+
+.caixas_cronograma h3{
+  color: #004349;
+  font-family: "Playfair Display", serif;
+}
+
 .timeline {
-  border-left: 3px solid #1E3c72;
+  border-left: 3px solid #DEBA7F;
   padding-left: 20px;
   margin-top: 20px;
 }
 
 .evento {
+  strong{color:#B25527 ; 
+  font-family: "Playfair Display", serif;
+  font-size:1.2rem;}
+  p{color:#434444 ; font-family:"Montserrat" , sans-serif ;}
   margin-bottom: 25px;
   position: relative; /*dá poder de flutuar na página*/
 }
@@ -370,10 +399,11 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   content: '';/*sem texto*/
   width: 12px;
   height: 12px;
-  background: red;
+  background: #C25E2D;
   border-radius:20px;
   position: absolute;
-  left:-27px;
+  left:-27.5px;
+  margin-top: 10px;
 }
 
 .grid-locais {
@@ -387,6 +417,15 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #cbdcf7
+}
+.local h4{
+  color:#B25527 ;
+  font-family: "Playfair Display", serif;
+}
+
+.local p{
+  color:#434444;
+  font-family:"Montserrat" , sans-serif ;
 }
 /*} pagina CRONOGRAMA*/
 
