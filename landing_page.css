@@ -1,154 +1,278 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --verde-escuro: #004349;
+  --verde-petroleo: #0A5C60;
+  --creme: #F8F2E9;
+  --areia: #E9DCC8;
+  --terracota: #C25E2D;
+  --laranja: #B25527;
+  --dourado: #DEBA7F;
+  --amarelo: #ffd700;
+  --cinza: #434444;
+  --branco: #ffffff;
+  --sombra: 0 12px 28px rgba(0, 67, 73, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
 
 /*pagina toda*/
 body {
-  background-color: #F8F2E9;
-  font-family:"Montserrat" , sans-serif ;
-  
+  margin: 0;
+  background: linear-gradient(180deg, var(--creme), #fffaf3);
+  color: var(--cinza);
+  font-family: "Montserrat", sans-serif;
 }
 
+p {
+  line-height: 1.7;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--verde-escuro);
+  margin-top: 0;
+  margin-bottom: 14px;
+}
 
 /*pagina toda*/
 
+/*Pagina INICIO {*/
+
 /*roda teto*/
-.quadro-branco {
-  
-  background-color:#264b8b;
-  padding:60px 20px;
-  text-align:center;
-}
-
-.cabecalho-container{
-  background-color: #264b8b;
-  text-align: center;
-}
-
-.cabecalho-container h1{
-    font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  color: white;
-  margin-top: 0; 
-}
-
-.cabecalho-container h2{
-  
-  color:#ffd700;
-}
-
-.cabecalho-container img{
-  border-radius: 13%;
-}
-
-button{
-    color:white;
-    background-color: orangered;
-    border-radius: 30px;
-    border-color: orangered;
-    border-width: 0;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.lista-limpa {
-  list-style: none;
-  margin: 0; 
-  box-shadow: 0 2xp 10 xp rgba(0,0,0,0,5);
-  gap: 20px;
-  display: flex;
-}
-
-.lista-limpa a:hover {
-  color: orangered; /* Exemplo: muda a cor do texto para o laranja do seu botão */
-  text-decoration: underline;
-}
-/*roda teto*/
-
-/*cabeçalho pagina principal*/
 .menu-principal {
-    background-color: #004349; padding: 15px 0; /*0 se refere a esquerda e direita*/
-    position: sticky; top:0; z-index: 1000;
-    box-shadow: 0 2xp 10 xp rgba(0,0,0,0,5);
-    
+  background: linear-gradient(90deg, var(--verde-escuro), var(--verde-petroleo));
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 18px rgba(0, 67, 73, 0.25);
 }
 
 .menu-container {
-    max-width: 1000px; margin: 0 auto; display: flex; 
-    justify-content: space-between; align-items: center;
-    padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
+
 
 .logo {
-  color: white;
-  text-decoration: none; 
-  font-weight: bold;
-  font-size: 1.2rem; text-decoration: uppercase;
+  color: var(--creme);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-/*cabeçalho pagina principal*/
 
-/*VITOR: Não consegui indentificar de onde são esses elementos { */
-.lista-limpa a{
-      color: #cbdcf7; text-decoration: none; font-size: 0.9rem; 
-      font-weight: 500; transition: color 0.3s;
+.lista{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.lista a {
+  color: var(--creme);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+
+}
+
+.lista a::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--dourado);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
 }
 
 .lista a:hover{
-  color:white;
+  color: var(--dourado);
 }
-/*} VITOR: Não consegui indentificar de onde são esses elementos*/
+
+.lista a:hover::after {
+  width: 100%;
+}
+/*roda teto*/
+
+/*cabeçalho pagina principal*/
+.cabecalho{
+  background:
+  radial-gradient(circle at 80% 30%, rgba(194, 94, 45, 0.22), transparent 28%),
+  linear-gradient(135deg, var(--creme), #fffaf4);
+  color: var(--verde-escuro);
+  padding: 70px 20px 95px;
+  text-align: center;
+}
+
+.cabecalho-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.cabecalho-container img {
+  max-width: 330px;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 67, 73, 0.18);
+  background: var(--branco);
+  padding: 10px;
+}
+
+.cabecalho-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin: 0 0 12px;
+  color: var(--verde-escuro);
+}
+
+.cabecalho-container h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--laranja);
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--terracota);
+  color: var(--branco);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+/*cabeçalho pagina principal*/
+
 
 /*main geral*/
 .principal{
-  
-  max-width: 900px;
-  margin: -40px auto 40px;
-  padding: 20px;
-
+  max-width: 1000px;
+  margin: 35px auto 45px;
+  padding: 0 20px;
 }
 
-section{
-  
-  background: white;
-  margin-bottom: 20px;
-  padding: 25px;
-  border-radius: 12px;
- box-shadow: 0 5px 15px rgba(0,0,0, 0.3)
+.cabecalho ~ .principal {
+  margin-top: -55px;
+}
+
+section{                                         /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS SECTIONS*/
+  background: rgba(255, 255, 255, 0.92);
+  margin-bottom: 24px;
+  padding: 36px 30px 30px;
+  border-radius: 22px;
+  box-shadow: var(--sombra);
+  border: 1px solid rgba(233, 220, 200, 0.9);
+  scroll-margin-top: 90px;                     /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS SECTIONS*/
 }
 /*main geral*/
 
+/*caixas da Nossa Indentidade*/
+.missao p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.homenagem {
+  list-style: none;
+  color: var(--laranja);
+}
+
+.cards-identidade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+} 
+
+.card{
+  background: var(--creme);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid var(--areia);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 67, 73, 0.12);
+}
+
+.card strong {
+  color: var(--terracota);
+  font-size: 1rem;
+}
+/*caixas da Nossa Indentidade*/
+
 /*caixa das datas pagina principal*/
 .importante {
-  display: flex; /* por padrão adota-se a horizontal (row)*/
+  display: flex;
   gap: 20px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
 }
 
 .caixa-importante {                 /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/      
-  flex: 1;                          /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-  background-color: #eef5ff;      /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-  padding: 15px;                    /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-  border-left: 5px solid blue;    /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-  border-radius: 8px;               /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-  margin-bottom: 10px;              /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
-                   /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
+  flex: 1;
+  background: var(--creme);
+  color: var(--cinza);
+  padding: 22px;
+  border-left: 6px solid var(--dourado);
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 67, 73, 0.08);
+  margin-bottom: 10px        /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/
+}
+
+.caixa-importante h4 {
+  margin-top: 0;
+  color: var(--laranja);
+  font-size: 1.1rem;
 }
 /*caixa das datas pagina principal*/
 
 /*caixa das horas de atividades pagina principal*/
 .recompensas ul {
-    list-style: none;
-    padding: 0;
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .recompensas li {
-    background-color: #e9f7ef;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 5px;
-    color: #27ae90;
-    font-weight: bold;
+  background: var(--creme);
+  margin: 12px 0;
+  padding: 15px 18px;
+  border-radius: 14px;
+  color: var(--verde-escuro);
+  font-weight: 600;
+  border-left: 5px solid var(--terracota);
+}
 
+.recompensas li strong {
+  color: var(--laranja);
 }
 /*caixa das horas de atividades pagina principal*/
 
@@ -318,8 +442,8 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 .card {
   flex-shrink: 0;
   width: 300px;
-  text-align: center;
-  background-color: white; 
+  text-align: left;
+  background: var(--creme);
   padding: 20px; 
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -436,7 +560,7 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
     flex-direction: column;
 }
 
-.button {
+button {
     background-color: #27ae60;
     color: white;
     padding: 10px 20px;
