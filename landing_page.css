@@ -236,7 +236,8 @@ section{                                         /*VITOR:CUIDADO AO MEXER POIS V
   padding: 0;
 }
 
-.caixa-importante {                 /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/      
+.caixa-importante {                 /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA PRINCIPAL*/    
+  list-style:none;  
   flex: 1;
   background: var(--creme);
   color: var(--cinza);
