@@ -304,6 +304,10 @@ table {
   background-color: white;
 }
 
+.arrendonda-titulo {
+  border-radius: 25px;
+}
+
 th, td {
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd ;
@@ -314,8 +318,8 @@ th, td {
 }
 
 th {
-  background-color:var(--dourado);
-  color:var(--verde-petroleo);
+  background-color:#0A5C60;/* ENZO: Alterei a cor para a mesma da Barra de navegação e o Footer */
+  color: white;
   text-transform: uppercase;
   font-size: 0.85rem;
 }
@@ -336,16 +340,16 @@ th {
 .medalhas {
   background-color: #fffffc;        /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   padding: 15px;                     /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
-  border-left: 5px solid yellow;    /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
+  border-left: 5px solid #DEBA7F;    /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   border-radius: 8px;                /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   margin-bottom: 10px;               /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
 } /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
 
 .medalhas li {
   list-style: none;                 /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
-  background-color: #eef5ff;       /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
+  background-color: #F8F2E9;       /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   padding: 15px;                    /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
-  border-left: 5px solid blue;     /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
+  border-left: 5px solid #DEBA7F;     /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   border-radius: 8px;               /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
   margin-bottom: 10px;              /*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
 }/*VITOR:CUIDADO AO MEXER POIS VAI MUDAR TODAS AS CAIXAS COM ESSA CLASS, NÃO AH SOMENTE NA PAGINA DE FORMATO*/
@@ -437,13 +441,16 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 .carrossel-trilha {
   display: flex;
   gap: 20px;
-  height: 555px;
+  height: 400px;
   
 }
 
 .card {
   flex-shrink: 0;
-  width: 300px;
+  height: 100%;
+  column-width: 400px;
+  column-gap: 30px;
+
   text-align: left;
   background: var(--creme);
   padding: 20px; 
@@ -452,6 +459,12 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   scroll-snap-align: center;
 }
 
+.card h3 { /* ENZO:Criei esse para combinar a fonte dos títulos dos primeiros cards */
+font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--laranja);
+  margin: 0;
+}
 .card ul {
   list-style: none;
   border-style: dashed;
@@ -465,10 +478,39 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   margin-bottom: 10px;
 }
 
-.card-suplementos {
-  flex: 1;
+.card-grande { /*ENZO:Criei essa segregação para formatar melhor os cards com mais informações*/
+  flex-shrink: 0;
+  height: 100%;
+  width: 600px;
+
+  text-align: left;
+  background: var(--creme);
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: center;
+}
+
+.card-grande li { /* ENZO:Criei esse para combinar a fonte dos itens de essências para conslusão da prova */
+  list-style: none;
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+.card-grande strong { /* ENZO:Criei esse para combinar a fonte dos itens de essências para conslusão da prova */
+color: var(--laranja);
+}
+
+.card-grande h3 { /* ENZO:Criei esse para combinar a fonte dos títulos dos primeiros cards */
+font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--laranja);
+  margin: 0;
+}
+
+.card-sangue { /* ENZO:Criei esse para dar destaque para a prova de Sangue */
   background-color: rgb(247, 195, 195);
-  padding: 5px;
+  padding: 20px;
   border-left: 5px solid red;
   border-radius: 8px;
   margin-bottom: 10px;
