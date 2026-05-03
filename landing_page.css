@@ -310,11 +310,12 @@ th, td {
   border-right: 1px solid #ddd ;
   padding: 12px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 th {
-  background-color:#1E3c72;
-  color: white;
+  background-color:var(--dourado);
+  color:var(--verde-petroleo);
   text-transform: uppercase;
   font-size: 0.85rem;
 }
@@ -479,10 +480,12 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
  background-color: #004349;
  color:white;
  text-align: center;
+ font-family: "Allura", cursive;
+ p{font-size:20px;}
  padding: 30px 20px;
  margin-top: 50px;
  font-size: 0.85rem;
- border-top: 4px solid yellow;
+ border-top: 4px solid var(--dourado);
 }
 
 .footer p {
@@ -491,9 +494,22 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 }
 /*} RODA PÉ DA PAGINA INTEIRA*/
 
+/*pagina INTEGRAÇÃO {*/
+.organizacao_integracao {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.organizacao_integracao h3 {
+  font-size: 1.5rem;
+}
+/*} pagina INTEGRAÇÃO*/
+
 /*pagina CRONOGRAMA {*/
 .caixas_cronograma{
-  background: #E9DCC8;
   margin-bottom: 20px;
   padding: 25px;
   border-radius: 12px;
@@ -555,10 +571,22 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 /*} pagina CRONOGRAMA*/
 
 /*pagina CALCULADORA {*/
+
+.calculadora_organizada{
+  display:flex;
+  gap: 30px;
+}
+
 .form-group {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+}
+
+.botao{
+   display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 button {
@@ -574,8 +602,9 @@ button {
 .resultado {
     margin-top: 20px;
     padding: 15px;
-    background-color: #eef5ff;
-    border-left: 5px solid #1e3c72;
+    background: var(--creme);
+    border-left: 5px solid  var(--dourado);
+    border-radius:10px;
     font-weight: bold;
     font-size: 1.2rem;
 }

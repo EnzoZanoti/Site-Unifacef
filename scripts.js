@@ -1,74 +1,77 @@
+function calcular(){
 
-                function calcular(){
-                    //recupera a quantidade de arroz
+    // ITENS AVULSOS
+    let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
+    let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
+    let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
+    let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
 
-                    let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
-                    let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
-                    let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
-                    let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
-                    let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 2) + (qtdeMacarrao * 4)
+    let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 2) + (qtdeMacarrao * 4)
 
-                    let cor = document.getElementById("cor").value
-                    let metaKit
+    // COR / META KIT
+    let cor = document.getElementById("cor").value
+    let metaKit
 
-                    if (cor == "verde"){
-                        metaKit = 61
-                    } //SI e CC//
-                    else if (cor == "vermelho"){
-                        metaKit = 32
-                    } //Administração//
-                    else if (cor == "laranja"){
-                        metaKit = 21
-                    } //Letras//
-                     else if (cor == "amarelo"){
-                        metaKit = 54
-                    } //Social//
-                     else if (cor == "cinza"){
-                        metaKit = 51
-                    } //Psicologia//
-                     else if (cor == "marron"){
-                        metaKit = 88
-                    } //Medicina//
-                     else if (cor == "preto"){
-                        metaKit = 60
-                    } //Software//
-                     else if (cor == "roxo"){
-                        metaKit = 42
-                    } //Engenharia//
-                    else if (cor == "rosa"){
-                        metaKit = 44
-                    } //Contábeis//
+    if (cor == "verde") metaKit = 61
+    else if (cor == "vermelho") metaKit = 32
+    else if (cor == "laranja") metaKit = 21
+    else if (cor == "amarelo") metaKit = 54
+    else if (cor == "cinza") metaKit = 51
+    else if (cor == "marrom") metaKit = 88
+    else if (cor == "preto") metaKit = 60
+    else if (cor == "roxo") metaKit = 42
+    else if (cor == "rosa") metaKit = 44
 
-                    let quantKit = Number(document.getElementById("quantKit").value)
-                    if (quantKit >= metaKit) {
-                        pontos = pontos + 5000
-                        if (quantKit > metaKit) {
-                            pontos = pontos + (quantKit - metaKit)*(5000/metaKit)
-                        }
-                    } else {
-                        pontos = pontos + quantKit * (5000/metaKit)
-                    }
+    // KITS
+    let qtdeKits = Number(document.getElementById("qtdeKits").value)
 
-                    let metaSuplemento
-                    if (metaKit % 2 == 0) {
-                        metaSuplemento = metaKit/2
-                    } else {metaSuplemento = (metaKit / 2) + 0.5}
+    if (qtdeKits >= metaKit){
+        pontos += 5000
+        if (qtdeKits > metaKit){
+            pontos += (qtdeKits - metaKit) * (5000 / metaKit)
+        }
+    } else {
+        pontos += qtdeKits * (5000 / metaKit)
+    }
 
-                    let quantSuplemento = Number(document.getElementById("quantSuplemento").value) 
-                    if (quantSuplemento >= metaSuplemento) {
-                        pontos = pontos + 5000
-                        if (quantSuplemento > metaSuplemento){
-                    pontos = pontos + (quantSuplemento - metaSuplemento) + (5000/metaSuplemento)
-                        }
-                       
-                    } else {
-                        pontos = pontos + quantSuplemento + (5000/metaSuplemento)
-                    }
+    // SUPLEMENTO
+    let metaSuplemento = (metaKit % 2 == 0) ? metaKit / 2 : (metaKit / 2) + 0.5
 
-                    let metaLeite = Number(document.getElementById("metaLeite").value)
-                    metaLeite = metaKit
-                    let metaSangue = Number(document.getElementById("metaSangue").value)
-                    metaSangue = metaSuplemento
+    let qtdeSuplemento = Number(document.getElementById("qtdeSuplemento").value)
 
-                    document.getElementById("result").innerText = "Pontuação: " + pontos.toFixed(2)
-                }
+    if (qtdeSuplemento >= metaSuplemento){
+        pontos += 5000
+        if (qtdeSuplemento > metaSuplemento){
+            pontos += (qtdeSuplemento - metaSuplemento) * (5000 / metaSuplemento)
+        }
+    } else {
+        pontos += qtdeSuplemento * (5000 / metaSuplemento)
+    }
+
+    // LEITE (usa mesma lógica do kit)
+    let qtdeLeite = Number(document.getElementById("metaLeite").value)
+
+    if (qtdeLeite >= metaKit){
+        pontos += 5000
+        if (qtdeLeite > metaKit){
+            pontos += (qtdeLeite - metaKit) * (5000 / metaKit)
+        }
+    } else {
+        pontos += qtdeLeite * (5000 / metaKit)
+    }
+
+    // SANGUE (usa lógica do suplemento)
+    let qtdeSangue = Number(document.getElementById("metaSangue").value)
+
+    if (qtdeSangue >= metaSuplemento){
+        pontos += 5000
+        if (qtdeSangue > metaSuplemento){
+            pontos += (qtdeSangue - metaSuplemento) * (5000 / metaSuplemento)
+        }
+    } else {
+        pontos += qtdeSangue * (5000 / metaSuplemento)
+    }
+
+    // RESULTADO
+    document.getElementById("result").innerText = "Pontuação Total: " + pontos.toFixed(2) + " pontos"
+}

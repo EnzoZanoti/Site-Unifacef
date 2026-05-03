@@ -29,91 +29,93 @@
         </nav>  
 
         <main class="principal">
-            <section>
-                <h3><img src="calculadora.png"/>  Simulador de Pontos - Itens Avulsos</h3>
-                <div>
-                    <div class="form-group">
-                        <!--rótulo de caixa de texto-->
-                        <label>Arroz (5kg)</label>
-                        <input type="number" value="0" min="0" id="qtdeArroz"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Feijão (2kg)</label>
-                        <input type="number" value="0" min="0" id="qtdeFeijao"/>
-                    </div>
-
-                     <div class="form-group">
-                        <!--2 pontos-->
-                        <label>Óleo (1L)</label> 
-                        <input type="number" value="0" min="0" id="qtdeOleo"/>
-                    </div>
-
-                     <div class="form-group">
-                         <!--4 pontos-->
-                        <label>Macarrão (500g)</label>
-                        <input type="number" value="0" min="0" id="qtdeMacarrao"/>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                
-                <h3><img src="calculadora.png"/>  Simulador de Pontos - Metas batidas</h3>
-
-                <div>
-
-                    <div class="form-group">
-                        
-                        <label> Escolha a cor do time </label>
-                        <select id="cor">
-                            <option value="amarelo">Amarelo</option>
-                            <option value="cinza">Cinza</option>
-                            <option value="laranja">Laranja</option>
-                            <option value="marrom">Marrom</option>
-                            <option value="preto">Preto</option>
-                            <option value="rosa">Rosa</option>
-                            <option value="roxo">Roxo</option>
-                            <option value="verde">Verde</option>
-                            <option value="vermelho">Vermelho</option>
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label>Kits de Alimentação</label>
-                        <input type="number" id="qtdeKits" min="0" value="0"/>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label>Qtde de Suplemento</label>
-                        <input type="number" id="qtdeSuplemento" min="0" value="0"/>
-                    </div>
-                    
+            <div class="calculadora_organizada">
+                <section>
+                    <h3><img src="calculadora.png"/>  Simulador de Pontos - Itens Avulsos</h3>
                     <div>
                         <div class="form-group">
-                            <label>Quantidade de Leite(1L)</label>
-                            <input type="number" id="metaLeite" min="0" value="0"/>
+                            <!--rótulo de caixa de texto-->
+                            <label>Arroz (5kg)</label>
+                            <input type="number" value="0" min="0" id="qtdeArroz"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Feijão (2kg)</label>
+                            <input type="number" value="0" min="0" id="qtdeFeijao"/>
+                        </div>
+
+                        <div class="form-group">
+                            <!--2 pontos-->
+                            <label>Óleo (1L)</label> 
+                            <input type="number" value="0" min="0" id="qtdeOleo"/>
+                        </div>
+
+                        <div class="form-group">
+                            <!--4 pontos-->
+                            <label>Macarrão (500g)</label>
+                            <input type="number" value="0" min="0" id="qtdeMacarrao"/>
                         </div>
                     </div>
+                </section>
 
-                        <div>
+                <section>
+                    
+                    <h3><img src="calculadora.png"/>  Simulador de Pontos - Metas batidas</h3>
+
+                    <div>
+
                         <div class="form-group">
-                            <label>Doação de Sangue</label>
-                            <input type="number" id="metaSangue" min="0" value="0"/>
+                            
+                            <label> Escolha a cor do time </label>
+                            <select id="cor">
+                                <option value="amarelo">Amarelo</option>
+                                <option value="cinza">Cinza</option>
+                                <option value="laranja">Laranja</option>
+                                <option value="marrom">Marrom</option>
+                                <option value="preto">Preto</option>
+                                <option value="rosa">Rosa</option>
+                                <option value="roxo">Roxo</option>
+                                <option value="verde">Verde</option>
+                                <option value="vermelho">Vermelho</option>
+                            </select>
+
                         </div>
+
+                        <div class="form-group">
+                            <label>Kits de Alimentação</label>
+                            <input type="number" id="qtdeKits" min="0" value="0"/>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Qtde de Suplemento</label>
+                            <input type="number" id="qtdeSuplemento" min="0" value="0"/>
+                        </div>
+                        
+                        <div>
+                            <div class="form-group">
+                                <label>Quantidade de Leite(1L)</label>
+                                <input type="number" id="metaLeite" min="0" value="0"/>
+                            </div>
+                        </div>
+
+                            <div>
+                            <div class="form-group">
+                                <label>Doação de Sangue</label>
+                                <input type="number" id="metaSangue" min="0" value="0"/>
+                            </div>
+                        </div>
+                    
                     </div>
                 
-                </div>
-
-            </section>
-
+                </section>
+            </div>
+            <div class="botao">
             <button onclick="calcular()">Calcular Total</button>
-                <div id="result" class="resultado">
+            </div>
+              <div id="result" class="resultado">
                     Pontuação Total: 0 pontos
                 </div>
-                
 
         </main>
 
