@@ -440,13 +440,16 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
 .carrossel-trilha {
   display: flex;
   gap: 20px;
-  height: 555px;
+  height: 400px;
   
 }
 
 .card {
   flex-shrink: 0;
-  width: 300px;
+  height: 100%;
+  column-width: 400px;
+  column-gap: 30px;
+
   text-align: left;
   background: var(--creme);
   padding: 20px; 
