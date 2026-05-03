@@ -458,6 +458,12 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   scroll-snap-align: center;
 }
 
+.card h3 {
+font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--laranja);
+  margin: 0;
+}
 .card ul {
   list-style: none;
   border-style: dashed;
@@ -471,10 +477,39 @@ border-radius: 50%; /* Transforma o quadrado num círculo perfeito */
   margin-bottom: 10px;
 }
 
-.card-suplementos {
-  flex: 1;
+.card-grande {
+  flex-shrink: 0;
+  height: 100%;
+  width: 600px;
+
+  text-align: left;
+  background: var(--creme);
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: center;
+}
+
+.card-grande li {
+  list-style: none;
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+.card-grande h3 {
+font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--laranja);
+  margin: 0;
+}
+
+.card-grande strong {
+color: var(--laranja);
+}
+
+.card-sangue {
   background-color: rgb(247, 195, 195);
-  padding: 5px;
+  padding: 20px;
   border-left: 5px solid red;
   border-radius: 8px;
   margin-bottom: 10px;
