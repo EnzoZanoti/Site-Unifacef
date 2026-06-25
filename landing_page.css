@@ -617,6 +617,7 @@ font-size: 1.2rem;
 .calculadora_organizada{
   display:flex;
   gap: 30px;
+  padding: 20px
 }
 
 .form-group {
