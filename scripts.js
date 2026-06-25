@@ -1,3 +1,20 @@
+let historicoSimulacoes = [];
+
+// 1. Encontrando os elementos no HTML
+const seletor = document.getElementById('cor');
+const secao = document.getElementById('minhaSecao');
+
+// 2. Adicionando um "ouvinte" para quando o select mudar
+seletor.addEventListener('change', function() {
+    
+    // Pegamos o valor (em inglês) que está escondido no <option> selecionado
+    let corEscolhida = seletor.value;
+    
+    // Injetamos essa cor diretamente no CSS da section
+    secao.style.backgroundColor = corEscolhida;
+    
+});
+
 function calcular(){
 
     // ITENS AVULSOS
@@ -12,15 +29,55 @@ function calcular(){
     let cor = document.getElementById("cor").value
     let metaKit
 
-    if (cor == "verde") metaKit = 61
-    else if (cor == "vermelho") metaKit = 32
-    else if (cor == "laranja") metaKit = 21
-    else if (cor == "amarelo") metaKit = 54
-    else if (cor == "cinza") metaKit = 51
-    else if (cor == "marrom") metaKit = 88
-    else if (cor == "preto") metaKit = 60
-    else if (cor == "roxo") metaKit = 42
-    else if (cor == "rosa") metaKit = 44
+    
+
+    //if (cor == "verde") metaKit = 61
+    //else if (cor == "vermelho") metaKit = 32
+    //else if (cor == "laranja") metaKit = 21
+    //else if (cor == "amarelo") metaKit = 54
+    //else if (cor == "cinza") metaKit = 51
+    //else if (cor == "marrom") metaKit = 88
+    //else if (cor == "preto") metaKit = 60
+    //else if (cor == "roxo") metaKit = 42
+    //else if (cor == "rosa") metaKit = 44
+
+    switch (cor){
+        case "green": 
+        metaKit = 61
+        break;
+
+        case "red": 
+        metaKit = 32
+        break;
+
+        case "orange": 
+        metaKit = 21
+        break;
+
+        case "yellow": 
+        metaKit = 54
+        break;
+
+        case "gray": 
+        metaKit = 51
+        break;
+
+        case "brown": 
+        metaKit = 88
+        break;
+
+        case "black": 
+        metaKit = 60
+        break;
+
+        case "purple": 
+        metaKit = 42
+        break;
+
+        case "pink": 
+        metaKit = 44
+        break;
+    }
 
     // KITS
     let qtdeKits = Number(document.getElementById("qtdeKits").value)
@@ -74,4 +131,25 @@ function calcular(){
 
     // RESULTADO
     document.getElementById("result").innerText = "Pontuação Total: " + pontos.toFixed(2) + " pontos"
+
+    historicoSimulacoes.push(pontos);
+
+            // 1. Criamos uma variável vazia para montar o texto da lista
+        let textoHistorico = "";
+
+        // 2. Criamos o nosso contador (i), que começa no índice 0 do vetor
+        let i = 0;
+
+        // 3. O laço de repetição
+        do {
+            textoHistorico = textoHistorico + "<li>Simulação " + (i + 1) + ": " + historicoSimulacoes[i].toFixed(2) + " pontos</li>";
+            
+            i++; 
+
+        } while (i < historicoSimulacoes.length); // Verifica se ainda há itens no vetor
+
+        // 4. Injetamos o texto completo lá no HTML que criamos no Passo 1
+        document.getElementById("listaHistorico").innerHTML = textoHistorico;
+
 }
+

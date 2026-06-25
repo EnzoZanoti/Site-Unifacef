@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <script src="scripts.js"></script>
+        <script src="scripts.js" defer></script>
     </head>
 
     <body>
@@ -58,7 +58,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id="minhaSecao">
                     
                     <h3><img src="imagens/calculadora.png"/>  Simulador de Pontos - Metas batidas</h3>
 
@@ -68,15 +68,15 @@
                             
                             <label> Escolha a cor do time </label>
                             <select id="cor">
-                                <option value="amarelo">Amarelo</option>
-                                <option value="cinza">Cinza</option>
-                                <option value="laranja">Laranja</option>
-                                <option value="marrom">Marrom</option>
-                                <option value="preto">Preto</option>
-                                <option value="rosa">Rosa</option>
-                                <option value="roxo">Roxo</option>
-                                <option value="verde">Verde</option>
-                                <option value="vermelho">Vermelho</option>
+                                <option value="yellow">Amarelo</option>
+                                <option value="gray">Cinza</option>
+                                <option value="orange">Laranja</option>
+                                <option value="brown">Marrom</option>
+                                <option value="black">Preto</option>
+                                <option value="pink">Rosa</option>
+                                <option value="purple">Roxo</option>
+                                <option value="green">Verde</option>
+                                <option value="red">Vermelho</option>
                             </select>
 
                         </div>
@@ -115,6 +115,11 @@
             </div>
               <div id="result" class="resultado">
                     Pontuação Total: 0 pontos
+
+                </div>
+                <div id="area-historico" class="resultado">
+                    <h4>⏱️ Histórico de Simulações</h4>
+                    <ul id="listaHistorico" style="list-style: none; padding: 0;"></ul>
                 </div>
 
         </main>
